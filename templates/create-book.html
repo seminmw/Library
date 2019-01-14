@@ -1,0 +1,32 @@
+<div>
+    <h1>Add new book</h1>
+    <hr />
+    <form action="/action/action.create-book.php" method="post">
+        <div class="form-group">
+            <input type="text" name="book" class="form-control" placeholder="book title" />
+        </div>
+
+        <div class="custom-control custom-radio">
+            <input type="radio" id="js-showAuthor" name="addedAuthors" class="custom-control-input" value="new">
+            <label class="custom-control-label" for="js-showAuthor">Create new authors</label>
+        </div>
+        <div class="custom-control custom-radio">
+            <input type="radio" id="js-showAuthors" name="addedAuthors" class="custom-control-input" value="selected" checked>
+            <label class="custom-control-label" for="js-showAuthors">Show list authors</label>
+        </div>
+
+        <br>
+        <div class="form-group js-newAuthor">
+            <input type="text" name="author" class="form-control" placeholder="author names (comma separated)" />
+        </div>
+        <div class="form-group js-newAuthors">
+          <select class="form-control" name="authors[]" multiple>
+              <option value="" hidden >Select authors</option>
+              %authorsOptions%
+          </select>
+        </div>
+        <hr />
+        <a href="books.php">Back</a>
+        <button type="submit" name="Submit" class="btn btn-primary ml-4">Add book</button>
+    </form>
+</div>

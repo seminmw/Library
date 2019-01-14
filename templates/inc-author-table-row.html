@@ -1,0 +1,17 @@
+<tr>
+    <td>
+        <a href="/author.php?id=%id%">
+          %author%
+        </a>
+    </td>
+    <td class="js-getDataByBooks" id="%id%">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            %books%
+        </button>
+    </td>
+    <th scope="row" id="left">
+        <a href="/action/action.delete-author.php?id=%id%" onClick="return confirm('Are you sure?')" class="btn btn-danger">
+            Delete
+        </a>
+    </th>
+</tr>
